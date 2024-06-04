@@ -6,12 +6,12 @@ var TodoList = /** @class */ (function () {
         this.tasks = new Map();
     }
     TodoList.prototype.addItem = function (item) {
-        this.tasks.set(item.id, item);
+        this.tasks.set(item.Id, item);
         console.log("Feladat:");
     };
     ;
     TodoList.prototype.deleteItem = function (item) {
-        this.tasks.delete(item.id);
+        this.tasks.delete(item.Id);
     };
     ;
     TodoList.prototype.listAllItems = function () {
@@ -19,7 +19,7 @@ var TodoList = /** @class */ (function () {
     };
     ;
     TodoList.prototype.listOneItem = function (item) {
-        return this.tasks.get(item.id);
+        return this.tasks.get(item.Id);
     };
     ;
     return TodoList;
