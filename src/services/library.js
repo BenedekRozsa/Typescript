@@ -9,5 +9,13 @@ class Library {
     addBook(book) {
         this.books.set(book.id, book);
     }
+    addBorrower(borrower) {
+        this.borrowers.set(borrower.id, borrower);
+    }
+    ;
+    removeBook(book) {
+        this.books.delete(book.id);
+    }
+    ;
 }
 exports.Library = Library;

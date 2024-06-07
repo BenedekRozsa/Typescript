@@ -9,6 +9,7 @@ export interface Book {
     category: Category;
 };
 
+// Nem ment ahogy gondoltam és utána ahogy újra olvastama  feladatot láttam, hogy megadtadd, hogy interface-t használjunk itt.
 /*
 class Book {
     readonly id: number;

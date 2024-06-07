@@ -1,4 +1,4 @@
-//models/borrower.ts
+da//models/borrower.ts
 
 export interface Borrower {
     readonly id: number;

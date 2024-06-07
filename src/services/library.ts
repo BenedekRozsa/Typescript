@@ -9,4 +9,11 @@ export class Library {
         this.books.set(book.id, book);
     }
 
+    addBorrower(borrower: Borrower): void {
+        this.borrowers.set(borrower.id, borrower)
+    };
+
+    removeBook(book: Book): void {
+        this.books.delete(book.id);
+    };
 }
