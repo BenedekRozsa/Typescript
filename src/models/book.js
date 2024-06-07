@@ -1,14 +1,7 @@
+"use strict";
 // models/book.ts
-
-import { Category } from "./category";
-
-export interface Book {
-    id: number;
-    title: string;
-    author: string;
-    category: Category;
-};
-
+Object.defineProperty(exports, "__esModule", { value: true });
+;
 /*
 class Book {
     readonly id: number;
@@ -44,4 +37,4 @@ class Book {
         }
     };
 };
-*/
+*/ 
