@@ -36,6 +36,13 @@ const borrower2: Borrower = {
     dateOfBirth: new Date('1971-04-17')
 };
 
+library.addBook(book1);
+library.addBook(book2);
+
+library.addBorrower(borrower1);
+library.addBorrower(borrower2);
+
+
 console.log(book1);
 console.log(book2);
 console.log(borrower1);

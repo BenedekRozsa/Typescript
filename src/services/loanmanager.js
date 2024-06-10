@@ -1,22 +1,33 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.LoanManager = void 0;
+/*
+export class LoanManager <T extends {id: number}> {
+    protected items: Map<number, T> = new Map();
+
+    addItem(item:T): void {
+        this.items.set(item.id, item);
+    };
+
+    removeItem(item: T): void {
+        this.items.delete(item.id);
+    };
+    listAllLoanedBooks(): T[] {
+        return Array.from(this.items.values());
+    };
+};
+*/
 class LoanManager {
     constructor() {
-        this.items = new Map();
+        this.loans = new Map();
     }
-    addItem(item) {
-        this.items.set(item.id, item);
-    }
-    ;
-    removeItem(item) {
-        this.items.delete(item.id);
+    addLoan(bookId, borrowerId) {
+        this.loans.set(bookId, borrowerId);
     }
     ;
-    listAllLoanedBooks() {
-        return Array.from(this.items.values());
+    removeloan(bookId) {
+        this.loans.delete(bookId);
     }
     ;
 }
 exports.LoanManager = LoanManager;
-;

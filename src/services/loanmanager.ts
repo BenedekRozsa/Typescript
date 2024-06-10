@@ -26,6 +26,5 @@ export class LoanManager{
     removeloan(bookId: number): void {
         this.loans.delete(bookId);
     };
-
-};
+}
 
