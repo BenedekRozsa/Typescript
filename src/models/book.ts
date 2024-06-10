@@ -10,6 +10,7 @@ export interface Base {
 export interface Book extends Base {
     author: string;
     category: Category;
+    isBorrowed?: boolean;
 };
 
 // Nem ment ahogy gondoltam és utána ahogy újra olvastama  feladatot láttam, hogy megadtadd, hogy interface-t használjunk itt.

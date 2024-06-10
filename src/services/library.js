@@ -29,6 +29,7 @@ class Library {
         }
         return false;
     }
+    ;
     listBorrowedBooks() {
         return Array.from(this.books.values()).filter(book => book.isBorrowed);
     }

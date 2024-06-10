@@ -31,6 +31,12 @@ library.addBook(book1);
 library.addBook(book2);
 library.addBorrower(borrower1);
 library.addBorrower(borrower2);
+/*
 console.log(book1);
 console.log(book2);
 console.log(borrower1);
+*/
+library.borrowBook(1, 2);
+library.borrowBook(2, 2);
+console.log(library);
+console.log('Ezek a borrowed bookok:', library.listBorrowedBooks());

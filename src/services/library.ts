@@ -31,13 +31,13 @@ export class Library {
             return true;
         }
         return false;
-    }
+    };
 
      listBorrowedBooks(): Book[] {
         return Array.from(this.books.values()).filter(book => book.isBorrowed)
     };   
-
-    };
+    
+};
 
 
 
