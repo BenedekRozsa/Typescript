@@ -2,9 +2,12 @@
 
 import { Category } from "./category";
 
-export interface Book {
-    id: number;
-    title: string;
+export interface Base {
+    readonly Id: number;
+    readonly title?: string;
+};
+
+export interface Book extends Base {
     author: string;
     category: Category;
 };

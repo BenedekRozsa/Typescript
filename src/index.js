@@ -5,5 +5,28 @@ const category_1 = require("./models/category");
 const library = new library_1.Library();
 const romanceCategory = new category_1.Romance('Romantika', 'regény');
 const CrimeCategory = new category_1.Romance('Romantika', 'sorozat');
-const book1, { id = 1, title = 'Murder on the Nile', author = 'Agatha Christie', category = CrimeCategory };
-const book2, { id = 2, title = 'Kate and Leo', author = 'Unknown', category = romanceCategory };
+const book1 = {
+    id: 1,
+    title: 'Murder on the Nile',
+    author: 'Agatha Christie',
+    category: CrimeCategory
+};
+const book2 = {
+    id: 2,
+    title: 'Kate and Leo',
+    author: 'Unknown',
+    category: romanceCategory
+};
+const borrower1 = {
+    id: 1,
+    name: 'Kis Sarolt',
+    dateOfBirth: new Date('2004-05-12')
+};
+const borrower2 = {
+    id: 2,
+    name: 'Nagy János',
+    dateOfBirth: new Date('1971-04-17')
+};
+console.log(book1);
+console.log(book2);
+console.log(borrower1);

@@ -1,7 +1,7 @@
-da//models/borrower.ts
+//models/borrower.ts
+import { Base } from"./book";
 
-export interface Borrower {
-    readonly id: number;
+export interface Borrower extends Base{
+    dateOfBirth?: Date;
     name: string;
-    dateOfBirth: Date;
 };
