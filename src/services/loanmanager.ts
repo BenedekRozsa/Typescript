@@ -26,5 +26,9 @@ export class LoanManager{
     removeloan(bookId: number): void {
         this.loans.delete(bookId);
     };
+
+    listLoans(): number[] {
+        return Array.from(this.loans.values())
+    }
 }
 

@@ -9,7 +9,7 @@ import { isBook, isCategories } from "./utils/typeguards";
 const library = new Library();
 
 const romanceCategory = new Romance('Romantika', 'regény');
-const CrimeCategory = new Romance('Romantika', 'sorozat');
+const CrimeCategory = new Crime('Krimi', 'könyv sorozat');
 
 const book1: Book = {
     Id:  1,
@@ -59,4 +59,7 @@ console.log('Ez a Crime typeguards: ', isCategories(book1.category));
 console.log('Ez a Crime typeguards: ', isCategories(book2.category));
 
 console.log('kikölcsönzött könyvek' , library.listBorrowedBooks());
+console.log('kölcsönzők listája' , library.listBorrowers());
 
+library.returnBook(1);
+console.log('kikölcsönzött könyvek a visszaadás után' , library.listBorrowedBooks());

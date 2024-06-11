@@ -18,6 +18,7 @@ export class Library {
 
     removeBook(book: Book): void {
         this.books.delete(book.Id);
+        this.loanManager.removeloan(book.Id);
     };
 
 
@@ -33,10 +34,21 @@ export class Library {
         return false;
     };
 
-     listBorrowedBooks(): Book[] {
+    returnBook(bookId: number): void {
+        const book = this.books.get(bookId);
+        if (book && book.isBorrowed) {
+            book.isBorrowed = false;
+            this.loanManager.removeloan(bookId);
+        }
+    };
+
+    listBorrowedBooks(): Book[] {
         return Array.from(this.books.values()).filter(book => book.isBorrowed)
     };   
     
+    listBorrowers(): Borrower[] {
+        return Array.from(this.borrowers.values())
+    };
 };
 
 

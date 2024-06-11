@@ -29,5 +29,8 @@ class LoanManager {
         this.loans.delete(bookId);
     }
     ;
+    listLoans() {
+        return Array.from(this.loans.values());
+    }
 }
 exports.LoanManager = LoanManager;

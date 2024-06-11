@@ -17,6 +17,7 @@ class Library {
     ;
     removeBook(book) {
         this.books.delete(book.Id);
+        this.loanManager.removeloan(book.Id);
     }
     ;
     borrowBook(bookId, borrowerId) {
@@ -30,8 +31,20 @@ class Library {
         return false;
     }
     ;
+    returnBook(bookId) {
+        const book = this.books.get(bookId);
+        if (book && book.isBorrowed) {
+            book.isBorrowed = false;
+            this.loanManager.removeloan(bookId);
+        }
+    }
+    ;
     listBorrowedBooks() {
         return Array.from(this.books.values()).filter(book => book.isBorrowed);
+    }
+    ;
+    listBorrowers() {
+        return Array.from(this.borrowers.values());
     }
     ;
 }
