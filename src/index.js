@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const library_1 = require("./services/library");
 const category_1 = require("./models/category");
+const typeguards_1 = require("./utils/typeguards");
 const library = new library_1.Library();
 const romanceCategory = new category_1.Romance('Romantika', 'regény');
 const CrimeCategory = new category_1.Romance('Romantika', 'sorozat');
@@ -40,3 +41,7 @@ library.borrowBook(1, 2);
 library.borrowBook(2, 2);
 console.log(library);
 console.log('Ezek a borrowed bookok:', library.listBorrowedBooks());
+console.log('Ez a Book typeguards: ', (0, typeguards_1.isBook)(book1));
+console.log('Ez a Crime typeguards: ', (0, typeguards_1.isCategories)(book1.category));
+console.log('Ez a Crime typeguards: ', (0, typeguards_1.isCategories)(book2.category));
+console.log('kikölcsönzött könyvek', library.listBorrowedBooks());

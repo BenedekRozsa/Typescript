@@ -4,6 +4,7 @@ import { Book } from "./models/book";
 import { Crime } from "./models/category";
 import { Romance } from "./models/category";
 import { Borrower } from "./models/borrower";
+import { isBook, isCategories } from "./utils/typeguards";
 
 const library = new Library();
 
@@ -53,4 +54,9 @@ console.log(library);
 console.log('Ezek a borrowed bookok:', library.listBorrowedBooks());
 
 
+console.log('Ez a Book typeguards: ', isBook(book1));
+console.log('Ez a Crime typeguards: ', isCategories(book1.category));
+console.log('Ez a Crime typeguards: ', isCategories(book2.category));
+
+console.log('kikölcsönzött könyvek' , library.listBorrowedBooks());
 
